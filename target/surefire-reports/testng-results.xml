@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="75773" started-at="2022-12-20T23:13:40 IST" finished-at="2022-12-20T23:14:56 IST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="75773" started-at="2022-12-20T23:13:40 IST" finished-at="2022-12-20T23:14:56 IST">
+      <class name="com.mindtree.paraBank.AppTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="beforeSuite" is-config="true" duration-ms="329" started-at="2022-12-20T23:13:40 IST" finished-at="2022-12-20T23:13:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="beforeTest" is-config="true" duration-ms="65768" started-at="2022-12-20T23:13:40 IST" finished-at="2022-12-20T23:14:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2022-12-20T23:14:46 IST" finished-at="2022-12-20T23:14:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test_1()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="test_1" duration-ms="9703" started-at="2022-12-20T23:14:46 IST" finished-at="2022-12-20T23:14:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="afterMethod" is-config="true" duration-ms="4" started-at="2022-12-20T23:14:56 IST" finished-at="2022-12-20T23:14:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="afterTest" is-config="true" duration-ms="241" started-at="2022-12-20T23:14:56 IST" finished-at="2022-12-20T23:14:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.mindtree.paraBank.AppTest@146ba0ac]" name="afterSuite" is-config="true" duration-ms="420" started-at="2022-12-20T23:14:56 IST" finished-at="2022-12-20T23:14:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.mindtree.paraBank.AppTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
