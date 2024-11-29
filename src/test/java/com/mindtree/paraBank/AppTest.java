@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -41,14 +43,16 @@ public class AppTest {
 	
 	@BeforeTest
 	public void beforeTest() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\azureuser\\Desktop\\SmartExecution_VM_local_project\\VMDemo\\Driver\\chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\azureuser\\Desktop\\SmartExecution_VM_local_project\\VMDemo\\Driver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
 
 	@Test()
 	public void test_1() throws Exception {
 		System.out.println("print from test");
-		driver.get("http://localhost:9090/para");
+		// driver.get("http://localhost:9090/para");
+		driver.get("https://parabank.parasoft.com/parabank/index.htm");
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("john");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("demo");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
