@@ -44,7 +44,7 @@ public class AppTest {
 	@BeforeTest
 	public void beforeTest() {
 		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\azureuser\\Desktop\\SmartExecution_VM_local_project\\VMDemo\\Driver\\chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
+		// WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
 
