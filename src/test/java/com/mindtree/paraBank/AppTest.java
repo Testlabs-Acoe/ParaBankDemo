@@ -22,7 +22,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class AppTest {
 	
-	public static WebDriver driver;
+	// public static WebDriver driver;
+	public static ChromeDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	
