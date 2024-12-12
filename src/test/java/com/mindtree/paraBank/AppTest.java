@@ -22,8 +22,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class AppTest {
 	
-	// public static WebDriver driver;
-	public static ChromeDriver driver;
+	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	
@@ -45,7 +44,7 @@ public class AppTest {
 	@BeforeTest
 	public void beforeTest() {
 		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\azureuser\\Desktop\\SmartExecution_VM_local_project\\VMDemo\\Driver\\chromedriver.exe");
-		// WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().driverVersion("114").setup();
 		driver = new ChromeDriver();
 	}
 
