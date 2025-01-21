@@ -2,21 +2,45 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
+ 
 trigger:
-- master
-
+- ParaAdoDemo
+ 
 pool:
-  vmImage: windows-latest
-
+  vmImage: 'windows-latest'
+ 
+variables:
+  MAVEN_OPTS: '-Xmx1024m'
+  
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
+    mavenOptions: '-Xmx1024m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean test'
+    # goals: 'clean install -DskipTests'
+    # goals: 'clean install'
+    goals: 'package'
+  displayName: 'Maven Clean Install'
+ 
+# - script: |
+#     mvn test
+#   displayName: 'Run Tests'
+ 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    testRunTitle: 'Maven Test Results'
+    mergeTestResults: true
+  displayName: 'Publish Test Results'
+ 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/Reports'
+    artifactName: 'TestReports'
+    publishLocation: 'pipeline'
+  displayName: 'Publish Test Reports'
