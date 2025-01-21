@@ -31,16 +31,16 @@ steps:
 #     mvn test
 #   displayName: 'Run Tests'
  
-- task: PublishTestResults@2
-  inputs:
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    testRunTitle: 'Maven Test Results'
-    mergeTestResults: true
-  displayName: 'Publish Test Results'
+# - task: PublishTestResults@2
+#   inputs:
+#     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+#     testRunTitle: 'Maven Test Results'
+#     mergeTestResults: true
+#   displayName: 'Publish Test Results'
  
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/Reports'
-    artifactName: 'TestReports'
-    publishLocation: 'pipeline'
-  displayName: 'Publish Test Reports'
+# - task: PublishPipelineArtifact@1
+#   inputs:
+#     targetPath: '$(System.DefaultWorkingDirectory)/Reports'
+#     artifactName: 'TestReports'
+#     publishLocation: 'pipeline'
+#   displayName: 'Publish Test Reports'
